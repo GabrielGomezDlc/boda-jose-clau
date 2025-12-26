@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Boda - José y Claudia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="assets/img/fav.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+body {
+  background-image: url('assets/img/paper-background2.png');
+  background-attachment: fixed;
+  background-size: auto;
+  background-repeat: repeat-y;
+  background-position: top center;
+}
+       .container{
+  width: min(1100px, 95vw);   /* más ancho real */
+  max-width: none;           /* evita que te limite */
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;        /* TODO al centro por defecto */
+}
+
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nombres {
+            font-family: "Mrs Saint Delafield", cursive;
+            font-size: 6.5em;
+            margin-bottom: 15px;
+            font-weight: 200;
+            letter-spacing: 0.5px;
+        }
+
+        .final {
+            font-family: "Mrs Saint Delafield", cursive;
+            font-size: 4.5em;
+            font-weight: 200;
+            letter-spacing: 0.5px;
+        }
+
+           .confirmar {
+            font-family: "Mrs Saint Delafield", cursive;
+            font-size: 4.5em;
+            font-weight: 200;
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            margin: 20px auto;
+        }
+
+        .subtitle {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin: 25px 0;
+    text-transform: uppercase;
+}
+.familia{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.familia .col{
+  flex: 1;
+  min-width: 0; 
+}
+
+.label {
+    margin-bottom: 1px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+}
+
+.mensaje {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+}
+
+.mensaje-regalo {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+}
+
+.mensaje-formal {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+}
+
+.parroquia {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+    letter-spacing: 0.5px;
+}
+
+.formal {
+    margin-top: 15px;
+    font-size: 1.6em;
+    letter-spacing: 0.5px;
+}
+
+.fecha {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 24px;
+}
+
+.hora {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.hora-hora {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.lugar {
+    font-size: 1.4em;
+    margin-top: 5px;
+}
+
+.direccion-parroquia {
+    font-size: 1.4em;
+}
+
+.nowrap{
+  white-space: nowrap;
+}
+
+.subtitle, .mensaje, .fecha, .lugar{
+  text-align: center;
+  width: 100%;
+  
+}
+
+.ceremonia-img{
+  margin-top: 10px;
+  width: 100%;
+  max-width: 700px;      /* tamaño elegante tipo invitación */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;         /* look acuarela */
+}
+
+
+.regalos-img{
+  width: 100%;
+  max-width: 700px;      /* tamaño elegante tipo invitación */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;         /* look acuarela */
+}
+
+
+.pepeclau-img{
+  width: 100%;
+  max-width: 800px;
+  height: 420px;              /* ALTURA FIJA → aquí se produce el recorte */
+  
+  object-fit: cover;          /* NO deforma, recorta */
+  object-position: center;    /* muestra el centro de la imagen */
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  opacity: 0.95;
+}
+
+.gatitos-img{
+  width: 100%;
+  max-width: 800px;
+  height: 600px;              /* ALTURA FIJA → aquí se produce el recorte */
+  
+  object-fit: cover;          /* NO deforma, recorta */
+  object-position: center;    /* muestra el centro de la imagen */
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  opacity: 0.95;
+  margin-top: 80px;
+  margin-bottom: 5px;
+}
+
+
+
+.mapa-container{
+  margin-top: 15px;
+  text-align: center;
+}
+
+.mapa-link{
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.mapa-icono{
+  width: 36px;
+  height: 36px;
+  fill: #333;              /* mismo tono del texto */
+  opacity: 0.85;
+}
+
+.mapa-texto{
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+}
+
+.invite-card{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.invite-img{
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+
+  /* Borde fino tipo papel */
+  border: 1px solid rgba(0,0,0,0.15);
+
+  /* Shadow EXACTO tipo tarjeta real */
+  box-shadow:
+    10px 10px 0 rgba(0,0,0,0.08);
+
+  background-color: #fff;
+}
+
+.nota-adultos{
+  margin-top: 80px;
+  font-size: 1.05em;
+  line-height: 1.9;
+  text-align: center;
+  color: #333;
+  max-width: 700px;
+}
+
+.confirmacion-container{
+  margin-top: 70px;
+  padding: 25px 30px;
+  width:600px;
+  text-align: center;
+  background-color: #f5f3ef;
+  border-radius: 18px;
+}
+
+.confirmacion-container p{
+  margin-bottom: 14px;
+}
+.opciones-confirmacion{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* =====================
+   BOTONES CONFIRMACIÓN
+   ===================== */
+
+.btn-confirmacion{
+  width: 100%;
+  max-width: 280px;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+
+  background-color: #5a4636;
+  color: #fff;
+
+  text-decoration: none;
+
+  font-family: 'Georgia', serif;
+  font-size: 1em;
+  letter-spacing: 0.3px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;   /* 🔑 todo centrado */
+  gap: 10px;                 /* 🔑 separación real texto–icono */
+
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-confirmacion:hover{
+  background-color: #4a392c;
+  transform: translateY(-1px);
+}
+
+/* Texto del botón */
+.btn-text{
+  line-height: 1;
+}
+
+/* Icono PNG */
+.btn-icon-img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* =====================
+   CONTENEDOR OPCIONES
+   ===================== */
+
+.opciones-confirmacion{
+  margin-top: 18px;        /* menos separación con texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;               /* 🔑 menos espacio entre botones */
+}
+
+/* =====================
+   SEPARADOR "o"
+   ===================== */
+
+.opcion-separador{
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;           /* 🔑 compacto */
+}
+
+.opcion-separador::before,
+.opcion-separador::after{
+  content: "";
+  flex: 1;
+  height: 1px;             /* línea continua */
+  background-color: rgba(0,0,0,0.25);
+}
+
+.opcion-separador span{
+  font-size: 0.9em;
+  opacity: 0.7;
+  font-family: 'Georgia', serif;
+}
+
+
+.hoteles-grid{
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 120px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+
+  text-align: center;
+}
+
+.hotel-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hotel-titulo{
+  font-size: 1.15em;
+  margin-bottom: 10px;
+}
+
+.hotel-subtitulo{
+  font-size: 0.95em;
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+
+.hotel-lineas{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hotel-linea{
+  font-size: 0.98em;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mini-icon{
+  font-size: 1.05em;
+  opacity: 0.9;
+}
+
+/* el link debe quedar abajo y centrado como la imagen */
+.hotel-link{
+  margin-top: 18px;
+}
+
+/* reutiliza tu estilo, pero versión compacta */
+.mapa-link--compact{
+  gap: 6px;
+}
+
+.mapa-icono--mini{
+  width: 20px;
+  height: 20px;
+  opacity: 0.75;
+}
+
+.mapa-texto--mini{
+  font-size: 0.82em;
+  opacity: 0.7;
+  margin: 0;
+}
+
+
+
+
+
+.mapa-link:hover .mapa-icono{
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.confirmacion-link{
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.confirmacion-container{
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.confirmacion-container:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+
+.unamor{
+  padding-bottom: 15px; padding-top: 10px;
+}
+
+.music-btn{
+  position: fixed;
+  bottom: 20px;       /* mobile queda igual */
+  z-index: 999;
+
+  width: 56px;
+  height: 72px;
+  border-radius: 18px;
+
+  background-color: rgba(90, 70, 54, 0.9);
+  color: #fff;
+
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;   /* 🔑 icono arriba, play abajo */
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.music-btn:hover{
+  transform: translateY(-2px);
+  background-color: rgba(74, 57, 44, 0.95);
+}
+
+/* Icono de música */
+.music-icon{
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+}
+
+/* Play / Pause */
+.music-state{
+  font-size: 1.1em;
+  line-height: 1;
+  padding-left: 3px;
+}
+
+.dato-bloque{
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Iconos arriba */
+.dato-iconos-top{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dato-icon{
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.dato-icon-bcp{
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Número + copiar */
+.dato-numero{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+}
+
+/* Icono copiar */
+.copy-icon{
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.copy-icon:hover{
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+/* =====================
+   DESKTOP → más a la izquierda
+   ===================== */
+@media (min-width: 769px){
+  .music-btn{
+    right: 120px;
+    left: auto;     /* 👈 se mueve a la izquierda */
+  }
+}
+
+/* =====================
+   MOBILE → se queda como está
+   ===================== */
+@media (max-width: 480px){
+  .music-btn{
+    width: 48px;
+    height: 64px;
+    bottom: 16px;
+    left: auto;
+     right: 10px;
+  }
+
+  .music-icon{
+    width: 18px;
+    height: 18px;
+  }
+
+  .music-state{
+    font-size: 1em;
+  }
+}
+
+
+
+/* =========================
+   SOLO CELULARES
+   ========================= */
+@media (max-width: 480px) {
+
+   html, body {
+    overflow-x: hidden;     /* evita scroll horizontal */
+    width: 100%;
+  }
+
+
+  .container{
+    width: 100%;
+    padding: 22px 14px;
+     overflow-x: hidden;   
+  }
+
+  p{
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+
+  .unamor{
+    padding-top: 6px;
+    padding-bottom: 24px;
+    padding-inline: 2px;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+  }
+
+  .nombres{
+    font-size: 3.5em;
+    margin-bottom: 16px;
+  }
+
+  .final{
+    font-size: 3em;
+    margin-bottom: 8px;
+  }
+
+  .confirmar{
+    font-size: 3.1em;
+  }
+
+  .subtitle{
+    font-size: 0.8em;
+    margin: 16px 0;
+    letter-spacing: 0.8px;
+  }
+
+  /* Familias y columnas a 1 columna */
+  .familia{
+    width: 100%;
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  /* En celular permitimos salto de línea */
+  .nowrap{
+    white-space: normal;
+    padding-bottom: 2px;
+  }
+
+  .label{
+    font-size: 1.25em;
+  }
+
+  .mensaje,
+  .mensaje-regalo,
+  .mensaje-formal{
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 0.8em;
+    padding-inline: 10px;
+  }
+
+    .mensaje-formal{
+      margin-top: 1px;
+   padding-inline: 20px;
+  }
+
+  .parroquia,
+  .formal{
+    font-size: 1.25em;
+    margin-bottom: 10px;
+  }
+
+  .fecha,
+  .hora,
+  .lugar,
+  .direccion-parroquia{
+    font-size: 1.05em;
+  }
+
+  .hora{
+    padding-top: 1px;
+  }
+
+  
+  .hora_hora{
+    padding-top: 1px;
+  }
+  
+  .fecha{
+    margin-left: 0;
+  }
+
+  /* Imágenes */
+  .ceremonia-img{
+    max-width: 380px;
+  }
+
+    .hotel-img{
+    height: 270px;
+    padding-bottom: 0px;
+  }
+
+
+  .regalos-img{
+    max-width: 320px;
+  }
+
+
+  /* Recorte banner (pepeclau-img) en móvil */
+  .pepeclau-img{
+    max-width: 100%;
+    height: 240px;
+  }
+
+  .gatitos-img{
+  height: 300px;              /* ALTURA FIJA → aquí se produce el recorte */
+  margin-top: 40px;
+}
+
+  /* Si tus imágenes tienen padding-right inline, lo anulamos */
+  img[style*="padding-right"]{
+    padding-right: 0 !important;
+  }
+
+  /* Tarjeta invite */
+  .invite-card{
+    margin-top: 35px;
+  }
+
+  .invite-img{
+    max-width: 320px;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.08);
+  }
+
+  .nota-adultos{
+    margin-top: 35px;
+    font-size: 0.95em;
+    line-height: 1.7;
+    max-width: 320px;
+  }
+
+  /* Confirmación: quitar width fijo 600 */
+  .confirmacion-container{
+    width: 100%;
+    max-width: 340px;
+    padding: 18px 16px;
+    margin-top: 35px;
+  }
+
+  .opciones-confirmacion{
+    margin-top: 14px;
+    gap: 10px;
+  }
+
+  .btn-confirmacion{
+    max-width: 280px;
+    padding: 12px 14px;
+    font-size: 0.95em;
+  }
+
+  .btn-icon{
+    font-size: 1.05em;
+  }
+
+  /* Hoteles: a 1 columna */
+  .hoteles-grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 70px;
+  }
+
+  .hotel-titulo{
+    font-size: 1.05em;
+  }
+
+  .hotel-subtitulo{
+    font-size: 0.9em;
+  }
+
+  .mapa-icono{
+    width: 30px;
+    height: 30px;
+  }
+
+  .mapa-texto{
+    font-size: 0.9em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    background-size: 560px auto; 
+    /* ↓ controla el ancho del fondo */
+    background-position: top center;
+  }
+}
+
+.toast{
+  position: fixed;
+  bottom: 90px;              /* arriba del botón música */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  background-color: #ffffff;
+  color: #333;
+
+  padding: 10px 18px;
+  border-radius: 20px;
+
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+/* visible */
+.toast.show{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Mobile ajuste */
+@media (max-width: 480px){
+  .toast{
+    bottom: 80px;
+    font-size: 0.9em;
+  }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+<audio id="bg-music" autoplay muted playsinline>
+  <source src="assets/audio/song3.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+        <p class="unamor">NUESTRA MAYOR AVENTURA COMIENZA AQUÍ Y QUEREMOS QUE SEAS PARTE DE ELLA</p>
+
+        
+
+        <div class="nombres">José y Claudia</div>
+        <img 
+  src="assets/img/pepeclau2.png" 
+  alt="Portales - Recepción" 
+  class="pepeclau-img"
+  style="padding-right: 50px;"
+/>
+
+<div class="familia" style="margin-top: 25px; margin-bottom: 20px;">
+  <div class="col">
+    <p class="nowrap" style="font-weight: 600;">José Manuel Gómez De la Cruz</p>
+  </div>
+  <div class="col">
+    <p class="nowrap" style="font-weight: 600;">Claudia Noelia Hinostroza Bartolo</p>
+  </div>
+</div>
+
+        <p class="subtitle">
+    CON LA BENDICIÓN DE DIOS, NUESTROS PADRES Y PADRINOS
+
+</p>
+
+
+
+<div class="familia" style="margin-top: 10px; gap:50px">
+    <div class="col">
+        <p class="label" style="font-family: 'Dancing Script', cursive;">Padres del Novio:</p>
+     <p>
+  <span class="nowrap">Milagros Bertha De la Cruz Lopez</span><br>
+  <span class="nowrap">Yober Eduardo Gómez Baldoceda</span>
+</p>
+    </div>
+
+    <div class="col">
+        <p class="label" style="font-family: 'Dancing Script', cursive;">Padres de la Novia:</p>
+        <p>
+  <span class="nowrap">Carmen Luz Bartolo Calderon</span><br>
+  <span class="nowrap">Cesar Fernando Hinostroza Hinostroza</span>
+</p>
+    </div>
+</div>
+
+<p class="label" style="padding-top: 20px; font-family: 'Dancing Script', cursive;" >Padrinos:</p>
+<p>
+  <span class="nowrap">Milagros Del Rocio Gómez Baldoceda</span><br>
+  <span class="nowrap">Juan Enrique Vásquez Valerio</span>
+</p>
+
+<p class="mensaje">
+    QUEREMOS COMPARTIR CON USTEDES ESTE DÍA TAN ESPECIAL,<br>
+    NUESTRA BODA
+</p>
+
+<p class="fecha">07 | FEBRERO | 2026</p>
+<p class="lugar">Tarma, Junín.</p>
+
+<div class="nombres" style="padding-top: 50px;">Ceremonia Religiosa</div>
+<img 
+  src="assets/img/Catedral_Acuarela.png" 
+  alt="Catedral - Ceremonia Religiosa" 
+  class="ceremonia-img"
+/>
+
+<p class="hora" style="padding-top: 30px;"> 12:00 hrs </p>
+<p class="parroquia">
+    CATEDRAL SANTA ANA
+</p>
+
+<p class="direccion-parroquia">Jr. Arequipa Nro 378</p>
+<p class="direccion-parroquia">Plaza de Armas, Tarma</p>
+
+<div class="mapa-container">
+    <a href="https://maps.google.com/?q=Catedral+de+Santa+Ana+Diocesis+Tarma" target="_blank" class="mapa-link">
+        <svg class="mapa-icono" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 
+            0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+        </svg>
+        <p class="mapa-texto">Haz click para ver en el mapa</p>
+    </a>
+</div>
+
+<div class="nombres" style="padding-top: 60px;">Recepción</div>
+<img 
+  src="assets/img/Hotel_Acuarela.png" 
+  alt="Portales - Recepción" 
+  class="hotel-img"
+/>
+<p class="hora" style="padding-top: 30px;"> 14:00 hrs </p>
+<p class="parroquia">
+    Hotel Los Portales
+</p>
+
+<p class="direccion-parroquia">Av. Castilla 512</p>
+
+<div class="mapa-container">
+    <a href="https://maps.google.com/?q=Hotel+Los+Portales+Tarma" target="_blank" class="mapa-link">
+        <svg class="mapa-icono" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 
+            0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+        </svg>
+        <p class="mapa-texto">Haz click para ver en el mapa</p>
+    </a>
+</div>
+
+<div class="nombres" style="padding-top: 60px;">Mesa de Regalos</div>
+
+<img 
+  src="assets/img/Regalo_Acuarela6.png" 
+  alt="Portales - Recepción" 
+  class="regalos-img"
+/>
+
+<p class="mensaje-regalo">
+    Tu presencia es el mejor regalo<br>
+    que podamos recibir. Sin embargo, si deseas <br>
+    hacernos un pequeño detalle, te dejamos nuestras cuentas:<br>
+</p>
+<!-- Número -->
+<!-- YAPE / PLIN -->
+<div class="dato-bloque">
+
+  <div class="dato-iconos-top">
+    <img src="assets/img/yape2.png" alt="Yape" class="dato-icon">
+    <img src="assets/img/plin.png" alt="Plin" class="dato-icon">
+  </div>
+
+  <div class="dato-numero">
+    <span>994 155 204</span>
+    <img 
+      src="assets/img/copy.svg" 
+      alt="Copiar"
+      class="copy-icon"
+      onclick="copiarTexto('994 155 204')"
+    >
+  </div>
+
+</div>
+
+
+<!-- BCP -->
+<div class="dato-bloque">
+
+  <div class="dato-iconos-top">
+    <img src="assets/img/bcp.png" alt="BCP" class="dato-icon-bcp">
+  </div>
+
+  <div class="dato-numero">
+    <span>CC: 5158996549049</span>
+    <img 
+      src="assets/img/copy.svg" 
+      alt="Copiar"
+      class="copy-icon"
+      onclick="copiarTexto('5158996549049')"
+    >
+  </div>
+
+  <div class="dato-numero">
+    <span>CCI: 00251500899654904956</span>
+    <img 
+      src="assets/img/copy.svg" 
+      alt="Copiar"
+      class="copy-icon"
+      onclick="copiarTexto('00251500899654904956')"
+    >
+  </div>
+
+</div>
+
+
+
+<div class="nombres" style="padding-top: 60px;">Código de Vestimenta</div>
+
+<img 
+  src="assets/img/Formal_Acuarela2.png" 
+  alt="Portales - Recepción" 
+  class="regalos-img"
+  style="padding-top: 20px;"
+/>
+
+<p class="formal"  style="padding-top: 10px;">
+    FORMAL
+</p>
+
+<p class="mensaje-formal">
+Debido al clima lluvioso de la temporada,<br> les recomendamos 
+venir preparados para el frío.<br>
+Agradeceremos evitar los colores blanco y amarillo.
+</p>
+
+<div class="invite-card">
+    <img 
+      src="assets/img/Invite_Acuarela3.png" 
+      alt="Pase para 2 personas"
+      class="invite-img"
+    >
+</div>
+
+<div class="confirmacion-container" ">
+
+    <p style="margin-bottom: 0px;">Favor de</p>
+
+    <div class="confirmar">Confirmar Asistencia</div>
+    <p>por medio de una de las siguientes opciones:</p>
+
+    <div class="opciones-confirmacion">
+
+        <!-- Botón WhatsApp -->
+      <a 
+  href="https://wa.me/51924596379?text=Hola%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda!"
+  target="_blank"
+  class="btn-confirmacion"
+>
+  <span class="btn-text">WhatsApp</span>
+</a>
+
+       <div class="opcion-separador">
+  <span>o</span>
+</div>
+
+        <!-- Botón Google Forms -->
+      <a 
+  href="https://forms.gle/Uv1MvuH8rerWw9XG6"
+  target="_blank"
+  class="btn-confirmacion" style="margin-bottom: 10px;"
+>
+  <span class="btn-text">Encuesta</span>
+</a>
+    </div>
+
+</div>
+
+
+
+
+<img 
+  src="assets/img/Gatijos_Acuarela.png" 
+  alt="Portales - Recepción" 
+  class="gatitos-img"
+/>
+
+
+<div class="final" style="padding-top: 10px;">Los esperamos</div>
+
+</div>
+
+<button id="music-toggle" class="music-btn" aria-label="Control de música">
+  <img 
+    src="assets/img/music-icon.svg" 
+    alt="Música"
+    class="music-icon"
+  >
+  <span class="music-state">▶︎</span>
+</button>
+
+<div id="toast-copiar" class="toast">
+  Copiado ✓
+</div>
+</body>
+<script>
+  const audio = document.getElementById("bg-music");
+  const btn = document.getElementById("music-toggle");
+
+  let isPlaying = false;
+
+  // Intentamos reproducir (autoplay muted)
+  audio.play().catch(() => {});
+
+  // Primer gesto del usuario → habilita sonido
+  function enableSoundOnce(){
+    audio.muted = false;
+    audio.play().then(() => {
+      isPlaying = true;
+      btn.querySelector(".music-state").textContent = "❚❚";
+    }).catch(() => {});
+    window.removeEventListener("pointerdown", enableSoundOnce);
+  }
+
+  window.addEventListener("pointerdown", enableSoundOnce, { once: true });
+
+  // Toggle play / pause
+  btn.addEventListener("click", () => {
+    if (isPlaying) {
+      audio.pause();
+      btn.querySelector(".music-state").textContent = "▶︎";
+      isPlaying = false;
+    } else {
+      audio.play().then(() => {
+        btn.querySelector(".music-state").textContent = "❚❚";
+        isPlaying = true;
+      }).catch(() => {});
+    }
+  });
+
+  // Cuando el audio termina, vuelve a play
+  audio.addEventListener("ended", () => {
+   btn.querySelector(".music-state").textContent = "▶︎";
+    isPlaying = false;
+  });
+
+    function copiarTexto(texto) {
+    navigator.clipboard.writeText(texto).then(() => {
+      alert("Copiado al portapapeles");
+    }).catch(() => {
+      alert("No se pudo copiar");
+    });
+  }
+
+   const toast = document.getElementById("toast-copiar");
+  let toastTimeout;
+
+  function copiarTexto(texto) {
+    navigator.clipboard.writeText(texto).then(() => {
+      mostrarToast();
+    });
+  }
+
+  function mostrarToast(){
+    clearTimeout(toastTimeout);
+    toast.classList.add("show");
+
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 1800);
+  }
+</script>
+
+
+</html>
