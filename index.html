@@ -8,10 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/png" href="assets/img/fav.ico">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<meta name="format-detection" content="telephone=no">
     <style>
         * {
             margin: 0;
@@ -54,6 +53,14 @@ body {
         }
 
         .nombres {
+            font-family: "Mrs Saint Delafield", cursive;
+            font-size: 6.5em;
+            margin-bottom: 15px;
+            font-weight: 200;
+            letter-spacing: 0.5px;
+        }
+
+        .nombres-1{
             font-family: "Mrs Saint Delafield", cursive;
             font-size: 6.5em;
             margin-bottom: 15px;
@@ -180,6 +187,12 @@ body {
 
 .nowrap{
   white-space: nowrap;
+}
+
+.nowrap-1{
+  white-space: nowrap;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.6em
 }
 
 .subtitle, .mensaje, .fecha, .lugar{
@@ -513,8 +526,8 @@ body {
   bottom: 20px;       /* mobile queda igual */
   z-index: 999;
 
-  width: 56px;
-  height: 72px;
+  width: 76px;
+  height: 92px;
   border-radius: 18px;
 
   background-color: rgba(90, 70, 54, 0.9);
@@ -540,14 +553,14 @@ body {
 
 /* Icono de música */
 .music-icon{
-  width: 20px;
-  height: 20px;
+  width: 45px;
+  height: 25px;
   opacity: 0.9;
 }
 
 /* Play / Pause */
 .music-state{
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: 1;
   padding-left: 3px;
 }
@@ -603,6 +616,62 @@ body {
   transform: scale(1.05);
 }
 
+.music-tooltip{
+  position: fixed;
+  bottom: 130px;          /* encima del botón */
+  right: 56px;
+
+  background-color: #ffffff;
+  color: #333;
+
+  padding: 8px 14px;
+  border-radius: 14px;
+
+  font-size: 0.85em;
+  letter-spacing: 0.4px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 998;
+}
+
+/* visible */
+.music-tooltip.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* flechita */
+.music-tooltip::after{
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  right: 96px;
+
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+/* Mobile ajuste */
+@media (max-width: 480px){
+  .music-tooltip{
+    bottom: 120px;
+    right: 20px;
+    font-size: 0.8em;
+  }
+
+  .music-tooltip::after{
+  right: 26px;
+}
+}
+
 
 /* =====================
    DESKTOP → más a la izquierda
@@ -619,20 +688,20 @@ body {
    ===================== */
 @media (max-width: 480px){
   .music-btn{
-    width: 48px;
-    height: 64px;
+    width: 68px;
+    height: 84px;
     bottom: 16px;
     left: auto;
      right: 10px;
   }
 
   .music-icon{
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
   }
 
   .music-state{
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
 
@@ -673,6 +742,11 @@ body {
     margin-bottom: 16px;
   }
 
+   .nombres-1{
+    font-size: 4.9em;
+    margin-bottom: 16px;
+  }
+
   .final{
     font-size: 3em;
     margin-bottom: 8px;
@@ -699,6 +773,12 @@ body {
   .nowrap{
     white-space: normal;
     padding-bottom: 2px;
+  }
+
+  .nowrap-1{
+    white-space: normal;
+    padding-bottom: 2px;
+    font-size: 1.25em;
   }
 
   .label{
@@ -845,7 +925,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    background-size: 560px auto; 
+    background-size: 535px auto; 
     /* ↓ controla el ancho del fondo */
     background-position: top center;
   }
@@ -904,7 +984,7 @@ body {
 
         
 
-        <div class="nombres">José y Claudia</div>
+        <div class="nombres-1">José y Claudia</div>
         <img 
   src="assets/img/pepeclau2.png" 
   alt="Portales - Recepción" 
@@ -914,10 +994,10 @@ body {
 
 <div class="familia" style="margin-top: 25px; margin-bottom: 20px;">
   <div class="col">
-    <p class="nowrap" style="font-weight: 600;">José Manuel Gómez De la Cruz</p>
+    <p class="nowrap-1" style="font-weight: 600;">José Manuel Gómez De la Cruz</p>
   </div>
   <div class="col">
-    <p class="nowrap" style="font-weight: 600;">Claudia Noelia Hinostroza Bartolo</p>
+    <p class="nowrap-1" style="font-weight: 600;">Claudia Noelia Hinostroza Bartolo</p>
   </div>
 </div>
 
@@ -1157,7 +1237,9 @@ Agradeceremos evitar los colores blanco y amarillo.
   >
   <span class="music-state">▶︎</span>
 </button>
-
+<div id="music-tooltip" class="music-tooltip">
+  Escucha nuestra canción 🎶
+</div>
 <div id="toast-copiar" class="toast">
   Copiado ✓
 </div>
@@ -1228,6 +1310,21 @@ Agradeceremos evitar los colores blanco y amarillo.
       toast.classList.remove("show");
     }, 1800);
   }
+
+    const tooltip = document.getElementById("music-tooltip");
+  const musicBtn = document.getElementById("music-toggle");
+
+  // Mostrar tooltip al cargar
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      tooltip.classList.add("show");
+    }, 600);
+  });
+
+  // Ocultar tooltip al tocar el botón
+  musicBtn.addEventListener("click", () => {
+    tooltip.classList.remove("show");
+  });
 </script>
 
 
