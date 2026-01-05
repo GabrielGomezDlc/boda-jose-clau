@@ -659,6 +659,45 @@ body {
   transform: rotate(45deg);
 }
 
+.btn-deseos {
+  margin: 10px auto 20px;
+  width: min(360px, 25%);   /* ✅ responsive: máximo 360, en mobile 85% */
+  height: 48px;
+
+  background-color: #5c4634;
+  color: #ffffff;
+
+  border-radius: 20px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-deseos:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.icon-falabella {
+  height: 20px;
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .btn-deseos {
+    width: 220px /* o 240px si lo quieres más compacto */
+  }
+}
+
 /* Mobile ajuste */
 @media (max-width: 480px){
   .music-tooltip{
@@ -1100,8 +1139,15 @@ body {
 <p class="mensaje-regalo">
     Tu presencia es el mejor regalo<br>
     que podamos recibir. Sin embargo, si deseas <br>
-    hacernos un pequeño detalle, te dejamos nuestras cuentas:<br>
+    hacernos un detalle, puedes realizarlo<br>
+    a través de las siguientes opciones:
 </p>
+
+<a href="https://www.noviosfalabella.com.pe/public/resultadoBusquedaNovios.do?categoria=todas&idsJerarquias=&nombreCategoria=&nivelCategoria=&codigoEvento=&dvEvento=&radTipoBusqueda=1&txtBusqueda=716551-11" class="btn-deseos" target="_blank">
+  <span>Lista de deseos</span>
+  <img src="assets/img/saga.png" alt="Falabella" class="icon-falabella">
+</a>
+
 <!-- Número -->
 <!-- YAPE / PLIN -->
 <div class="dato-bloque">
